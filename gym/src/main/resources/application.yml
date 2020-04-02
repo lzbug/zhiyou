@@ -1,6 +1,4 @@
 
-server:
-  port: 8000
 #数据源
 spring:
   datasource:

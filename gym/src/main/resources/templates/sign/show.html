@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+		<meta charset="UTF-8">
+		<title>疫情管理系统 - 后台管理</title>
+	    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+		<style type="text/css">
+			body {
+				margin: 20px;
+			}
+
+			td {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+<body >
+
+	<a href="">用户签到</a>
+	
+	<table class="table table-bordered">
+		<tr>
+			<td>序号</td>
+			<td>签到编号</td>
+			<td>签到时间</td>
+			<td>会员账号</td>
+			<td>备注</td>
+		</tr>
+		<tr th:each="sign,item:${sign}">
+			<td th:text="${item.count}">序号</td>
+			<td th:text="${sign.signNumber}">签到编号</td>
+			<td th:text="${sign.signPerId}">签到时间</td>
+			<td th:text="${sign.signRemarks}">会员账号</td>
+			<td th:text="${sign.signStatus}">备注</td>
+		</tr>
+	</table>
+</body>
+</html>
