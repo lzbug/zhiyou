@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface SignService {
     public List<Sign> queryAll();
-    public Integer add();
+    public Integer add(Sign sign);
 }

@@ -18,5 +18,5 @@ public interface SignMapper {
     public List<Sign> queryAll();
 
     @Insert("insert into sign values(null,#{sign_number},#{sign_time},#{sign_per_id},#{sign_remarks},#{sign_status})")
-    public int add();
+    public int add(Sign sign);
 }

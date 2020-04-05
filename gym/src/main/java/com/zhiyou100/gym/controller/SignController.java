@@ -24,10 +24,15 @@ public class SignController {
 //        return  signService.queryAll();
 //    }
 
-    @GetMapping("sign")
+    @GetMapping("show")
     public String show(Model model){
         model.addAttribute("sign",signService.queryAll());
         return "sign/show";
     }
 
+    @PostMapping("add")
+    public String add(Sign sign){
+        signService.add(sign);
+        return "redirect:sign/show";
+    }
 }

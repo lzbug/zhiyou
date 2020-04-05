@@ -18,7 +18,7 @@ public class SignServiceImpl implements SignService {
     }
 
     @Override
-    public Integer add() {
-        return signMapper.add();
+    public Integer add(Sign sign) {
+        return signMapper.add(sign);
     }
 }
